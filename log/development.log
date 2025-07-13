@@ -2427,3 +2427,855 @@ Processing by KittensController#index as HTML
 Completed 200 OK in 40ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
 
 
+Started GET "/kittens/3" for ::1 at 2025-07-13 18:57:19 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.3ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.6ms)
+Completed 200 OK in 40ms (Views: 2.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 18:57:19 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/kittens/3" for ::1 at 2025-07-13 18:57:29 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Meow-Thusaleh", "age"=>"7", "cuteness"=>"10", "softness"=>"10"}, "commit"=>"save kitten", "id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mKitten Update (0.6ms)[0m  [1m[33mUPDATE "kittens" SET "age" = 7, "cuteness" = 10, "softness" = 10, "updated_at" = '2025-07-13 22:57:29.526334' WHERE "kittens"."id" = 3 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+Redirected to http://localhost:3000/kittens/3
+Completed 302 Found in 41ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 18:57:29 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 0.8ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:57:40 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.5ms)
+Completed 200 OK in 40ms (Views: 3.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:01:13 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.3ms)
+Completed 200 OK in 26ms (Views: 2.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:01:14 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>)
+Caused by: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if kitten.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:01:14 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>)
+Caused by: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if kitten.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001288fd530>):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:01:31 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if form.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:02:06 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if form.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:03:06 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if form.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:03:11 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+    1: <%= form_with model: @kitten do |form| %>
+    2: <% if form.errors.any? %>
+    3: <p>
+    4:     how dare you make a kitteny error!
+    5: </p>
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NoMethodError (undefined method `errors' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:2
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:04:13 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.8ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `>' for nil)
+Caused by: NoMethodError (undefined method `>' for nil)
+
+Information for: ActionView::Template::Error (undefined method `>' for nil):
+     8:     <li><%= error.full_message %></li>
+     9:     <% end %>
+    10: </ul>
+    11: <% end>%>
+    12: 
+    13:     <%= form.text_field :name, placeholder: "Name"%><br>
+    14: 
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+
+Information for cause: NoMethodError (undefined method `>' for nil):
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/edit.html.erb:2
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:04:25 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 3.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/kittens/3" for ::1 at 2025-07-13 19:04:49 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"", "age"=>"7", "cuteness"=>"10", "softness"=>"2"}, "commit"=>"save kitten", "id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mKitten Update (0.6ms)[0m  [1m[33mUPDATE "kittens" SET "name" = '', "softness" = 2, "updated_at" = '2025-07-13 23:04:49.758960' WHERE "kittens"."id" = 3 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+Redirected to http://localhost:3000/kittens/3
+Completed 302 Found in 41ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:04:49 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:04:51 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:04:55 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 1.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:04:55 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/kittens/3" for ::1 at 2025-07-13 19:05:00 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Meow-Thusaleh", "age"=>"0", "cuteness"=>"1", "softness"=>"1"}, "commit"=>"save kitten", "id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mKitten Update (0.6ms)[0m  [1m[33mUPDATE "kittens" SET "name" = 'Meow-Thusaleh', "age" = 0, "cuteness" = 1, "softness" = 1, "updated_at" = '2025-07-13 23:05:00.910335' WHERE "kittens"."id" = 3 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+Redirected to http://localhost:3000/kittens/3
+Completed 302 Found in 42ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:05:00 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.3ms)
+Completed 200 OK in 23ms (Views: 1.2ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:05:20 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/kitten.rb:2:in `<class:Kitten>'
+app/models/kitten.rb:1:in `<main>'
+app/controllers/kittens_controller.rb:41:in `find_kitten'
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:06:19 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 2.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:06:20 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/kittens/3" for ::1 at 2025-07-13 19:06:24 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"", "age"=>"0", "cuteness"=>"1", "softness"=>"1"}, "commit"=>"save kitten", "id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.7ms | GC: 0.7ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.7ms)
+Completed 422 Unprocessable Content in 38ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started PATCH "/kittens/3" for ::1 at 2025-07-13 19:06:41 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Meow-Thusaleh", "age"=>"3", "cuteness"=>"10", "softness"=>"10"}, "commit"=>"save kitten", "id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mKitten Update (0.6ms)[0m  [1m[33mUPDATE "kittens" SET "age" = 3, "cuteness" = 10, "softness" = 10, "updated_at" = '2025-07-13 23:06:41.871714' WHERE "kittens"."id" = 3 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+Redirected to http://localhost:3000/kittens/3
+Completed 302 Found in 42ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:06:41 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 0.8ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:06:46 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 2.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 19:06:46 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 2.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:08:40 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+SyntaxError (/Users/mpeer/Documents/repos/odin-kittens/app/models/kitten.rb:4: syntax error, unexpected integer literal, expecting =>
+...nly_integer: true, :equal_to 10 }
+...                             ^~
+):
+  
+app/models/kitten.rb:4: syntax error, unexpected integer literal, expecting =>
+app/controllers/kittens_controller.rb:41:in `find_kitten'
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:08:49 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 2.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 19:08:50 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 19:08:51 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 19:09:37 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.7ms | GC: 0.3ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.3ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.3ms)
+Completed 200 OK in 36ms (Views: 4.4ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 19:09:38 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:09:39 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.3ms)
+Completed 200 OK in 41ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:09:48 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 2.0ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 1.4ms)
+Completed 200 OK in 30ms (Views: 4.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 9.3ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:09:50 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 2.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kittens" for ::1 at 2025-07-13 19:09:52 -0400
+Processing by KittensController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 37ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: kitten):
+  
+app/controllers/kittens_controller.rb:45:in `kitten_params'
+app/controllers/kittens_controller.rb:9:in `create'
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:09:52 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kittens" for ::1 at 2025-07-13 19:09:52 -0400
+Processing by KittensController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 37ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: kitten):
+  
+app/controllers/kittens_controller.rb:45:in `kitten_params'
+app/controllers/kittens_controller.rb:9:in `create'
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:09:52 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3/edit" for ::1 at 2025-07-13 19:10:47 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 2.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 19:10:48 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 19:10:48 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:10:50 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 1.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 19:10:51 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:11:32 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3><%= @kitten.name %></h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%= button_to "edit kitten", edit_kitten_path(@kitten), :method => :get %>
+<%= button_to "home", kittens_path :method => :get %>
+<%= button_to "delete", @kitten, method: :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...utton_to "home", kittens_path :method => :get ); @output_buf...
+...                              ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3><%= @kitten.name %></h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%= button_to "edit kitten", edit_kitten_path(@kitten), :method => :get %>
+<%= button_to "home", kittens_path :method => :get %>
+<%= button_to "delete", @kitten, method: :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+):
+1:    <h3><%= @kitten.name %></h3>
+2:    <p>
+3:        age: <%= @kitten.age %> months<br>
+4:        cuteness: <%= @kitten.cuteness %>/10<br>
+5:        softness: <%= @kitten.softness %>/10<br>
+6:    </p>
+7:    <%= button_to "edit kitten", edit_kitten_path(@kitten), :method => :get %>
+8:    <%= button_to "home", kittens_path :method => :get %>
+9:    <%= button_to "delete", @kitten, method: :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...utton_to "home", kittens_path :method => :get ); @output_buf...
+...                              ^
+):
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:11:42 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 2.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:12:03 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:12:03 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 19:12:09 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 2.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 19:12:23 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+

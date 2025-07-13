@@ -1,5 +1,14 @@
 <%= form_with model: @kitten do |form| %>
-
+<% if @kitten.errors.any? %>
+<p>
+    how dare you make a kitteny error!
+</p>
+<ul>
+    <%= @kitten.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+</ul>
+<% end %>
 
     <%= form.text_field :name, placeholder: "Name"%><br>
 

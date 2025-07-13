@@ -4,6 +4,7 @@
     cuteness: <%= @kitten.cuteness %>/10<br>
     softness: <%= @kitten.softness %>/10<br>
 </p>
-<%= link_to "edit kitten", edit_kitten_path(@kitten) %>
-<%= link_to "home", kittens_path %>
-<%= button_to "delete", @kitten, method: :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+<%= button_to "edit kitten", edit_kitten_path(@kitten), :method => :get %><br>
+
+<%= button_to "delete", @kitten, method: :delete, data: { turbo_confirm: "are you sure you want to delete?" } %><br>
+<%= button_to "back", kittens_path, :method => :get %>
