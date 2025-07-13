@@ -11,3 +11,2419 @@ Migrating to CreateKittens (20250713193959)
   [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250713193959') RETURNING "version" /*application='OdinKittens'*/[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OdinKittens'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OdinKittens'*/[0m
+Started GET "/" for ::1 at 2025-07-13 15:59:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OdinKittens'*/[0m
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/index.html.erb within layouts/application (Duration: 4.3ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 2.6ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.7ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+):
+1:    <%= render "new" %>
+2:    <h3>KITTEN LIST</h3>
+3:    <%= @kittens.each.do |kitten| %>
+4:    <p>
+5:        <strong><%= link_to kitten.name, kitten %></strong><br>
+6:        age: <%= kitten.age %> months<br>
+7:        cuteness: <%= kitten.cuteness.to_i %>/10<br>
+8:        softness: <%= kitten.softness.to_i %>/10<br>
+9:    </p>
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+):
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+Started GET "/" for ::1 at 2025-07-13 15:59:19 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+):
+1:    <%= render "new" %>
+2:    <h3>KITTEN LIST</h3>
+3:    <%= @kittens.each.do |kitten| %>
+4:    <p>
+5:        <strong><%= link_to kitten.name, kitten %></strong><br>
+6:        age: <%= kitten.age %> months<br>
+7:        cuteness: <%= kitten.cuteness.to_i %>/10<br>
+8:        softness: <%= kitten.softness.to_i %>/10<br>
+9:    </p>
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+):
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+Started GET "/" for ::1 at 2025-07-13 15:59:57 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+<% end %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:12: syntax error, unexpected `end'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "new" %>
+<h3>KITTEN LIST</h3>
+<%= @kittens.each.do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness.to_i %>/10<br>
+    softness: <%= kitten.softness.to_i %>/10<br>
+</p>
+<% end %>
+):
+1:    <%= render "new" %>
+2:    <h3>KITTEN LIST</h3>
+3:    <%= @kittens.each.do |kitten| %>
+4:    <p>
+5:        <strong><%= link_to kitten.name, kitten %></strong><br>
+6:        age: <%= kitten.age %> months<br>
+7:        cuteness: <%= kitten.cuteness.to_i %>/10<br>
+8:        softness: <%= kitten.softness.to_i %>/10<br>
+9:    </p>
+10:    <% end %>
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+app/views/kittens/index.html.erb:12: syntax error, unexpected `end'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+...d=( @kittens.each.do |kitten| ); @output_buffer.safe_append='
+...                              ^
+/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/index.html.erb:12: syntax error, unexpected `end'
+          end
+          ^~~
+):
+  
+app/views/kittens/index.html.erb:3: syntax error, unexpected ')'
+app/views/kittens/index.html.erb:12: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-07-13 16:00:42 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 16:06:55 -0400
+Processing by KittensController#index as HTML
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.1ms)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/kitten.rb:2:in `<class:Kitten>'
+app/models/kitten.rb:1:in `<main>'
+app/controllers/kittens_controller.rb:10:in `index'
+Started GET "/" for ::1 at 2025-07-13 16:07:27 -0400
+Processing by KittensController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+SyntaxError (/Users/mpeer/Documents/repos/odin-kittens/app/models/kitten.rb:6: syntax error, unexpected end-of-input
+# end
+     ^
+):
+  
+app/models/kitten.rb:6: syntax error, unexpected end-of-input
+app/controllers/kittens_controller.rb:10:in `index'
+Started GET "/" for ::1 at 2025-07-13 16:07:40 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 16:08:36 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001257b15f8>)
+Caused by: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001257b15f8>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001257b15f8>):
+    1: <%= form_with model: kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001257b15f8>):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:03:52 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:06:30 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:06:37 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:07:09 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:07:11 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:15:01 -0400
+  
+SyntaxError (/Users/mpeer/Documents/repos/odin-kittens/app/controllers/kittens_controller.rb:47: syntax error, unexpected ',', expecting ')'
+... params.expect(kitten: ( :name, :age, :cuteness, :softness ))
+...                              ^
+):
+  
+app/controllers/kittens_controller.rb:47: syntax error, unexpected ',', expecting ')'
+Started GET "/" for ::1 at 2025-07-13 18:16:55 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |kitten| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:19:09 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:19:10 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4: 
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:21:53 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.5ms | GC: 0.1ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4:     <%= form.label :name%>
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:24:49 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/_new.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4:     <%= form.label :name%>
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/_new.html.erb:1
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:25:37 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.8ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 1.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with model: @kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4:     <%= form.label :name%>
+  
+app/views/kittens/index.html.erb:1
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/kittens/index.html.erb:1
+Started GET "/" for ::1 at 2025-07-13 18:28:52 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (1.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" ORDER BY "kittens"."created_at" DESC /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 3.2ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 2.1ms)
+Completed 200 OK in 32ms (Views: 9.3ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:28:53 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.3ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001262fc958>)
+Caused by: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001262fc958>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `kitten' for an instance of #<Class:0x00000001262fc958>):
+    1: <%= form_with model: kitten do |form| %>
+    2: 
+    3:     <h3>Create new Kitten</h3>
+    4:     <%= form.label :name%>
+  
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NameError (undefined local variable or method `kitten' for an instance of #<Class:0x00000001262fc958>):
+  
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:29:05 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 4.3ms | GC: 0.1ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 4.7ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+     8:     age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+     9: 
+    10:     <%= form.label :cuteness%>
+    11:     cuteness: <%= form.cuteness :cuteness, in: 1..10, step: 1  %><br>
+    12: 
+    13:     <%= form.label :softness%>
+    14:     softness: <%= form.softness :softness, in: 1.10, step: 1  %><br>
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:30:11 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:30:27 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+     8:     <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+     9: 
+    10:     <%= form.label :cuteness%>
+    11:     cuteness: <%= form.cuteness :cuteness, in: 1..10, step: 1  %><br>
+    12: 
+    13:     <%= form.label :softness%>
+    14:     softness: <%= form.softness :softness, in: 1.10, step: 1  %><br>
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:11
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:30:42 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+     6:     age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+     7: 
+     8:     <%= form.label :cuteness%>
+     9:     cuteness: <%= form.cuteness :cuteness, in: 1..10, step: 1  %><br>
+    10: 
+    11:     <%= form.label :softness%>
+    12:     softness: <%= form.softness :softness, in: 1.10, step: 1  %><br>
+  
+app/views/kittens/_form.html.erb:9
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:9
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:31:27 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.6ms | GC: 0.1ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+     5: 
+     6:     age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+     7: 
+     8:     cuteness: <%= form.cuteness :cuteness, in: 1..10, step: 1  %><br>
+     9: 
+    10:     softness: <%= form.softness :softness, in: 1.10, step: 1  %><br>
+    11:     <%= form.submit "save kitten"%><br>
+  
+app/views/kittens/_form.html.erb:8
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `cuteness' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/kittens/_form.html.erb:8
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:31:56 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.6ms | GC: 1.1ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.8ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 1.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `min' for an instance of Float)
+Caused by: NoMethodError (undefined method `min' for an instance of Float)
+
+Information for: ActionView::Template::Error (undefined method `min' for an instance of Float):
+     7: 
+     8:     cuteness: <%= form.number_field :cuteness, in: 1..10, step: 1  %><br>
+     9: 
+    10:     softness: <%= form.number_field :softness, in: 1.10, step: 1  %><br>
+    11:     <%= form.submit "save kitten"%><br>
+    12: 
+    13: <% end %>
+  
+app/views/kittens/_form.html.erb:10
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `min' for an instance of Float):
+  
+app/views/kittens/_form.html.erb:10
+app/views/kittens/_form.html.erb:1
+app/views/kittens/new.html.erb:2
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:32:22 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.0ms | GC: 0.3ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.6ms)
+Completed 200 OK in 28ms (Views: 3.1ms | ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:33:37 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @kitten do |form| %>
+
+    <h3>Create new Kitten</h3>
+    <%= form.text_field :name, placeholder: "Name"%><br>
+
+    age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+
+    cuteness: <%= form.number_field :cuteness, in: 1..10, step: 1  %><br>
+
+    softness: <%= form.number_field :softness, min: 1, :max 10, step: 1  %><br>
+    <%= form.submit "save kitten"%><br>
+
+<% end %>
+
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/_form.html.erb:10: syntax error, unexpected integer literal, expecting =>
+...ield :softness, min: 1, :max 10, step: 1  ); @output_buffer....
+...                             ^~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with model: @kitten do |form| %>
+
+    <h3>Create new Kitten</h3>
+    <%= form.text_field :name, placeholder: "Name"%><br>
+
+    age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+
+    cuteness: <%= form.number_field :cuteness, in: 1..10, step: 1  %><br>
+
+    softness: <%= form.number_field :softness, min: 1, :max 10, step: 1  %><br>
+    <%= form.submit "save kitten"%><br>
+
+<% end %>
+
+
+):
+1:    <%= form_with model: @kitten do |form| %>
+2:    
+3:        <h3>Create new Kitten</h3>
+4:        <%= form.text_field :name, placeholder: "Name"%><br>
+5:    
+6:        age: <%= form.number_field :age, in: 1..24, step: 1 %> months<br>
+7:    
+8:        cuteness: <%= form.number_field :cuteness, in: 1..10, step: 1  %><br>
+9:    
+10:        softness: <%= form.number_field :softness, min: 1, :max 10, step: 1  %><br>
+11:        <%= form.submit "save kitten"%><br>
+12:    
+13:    <% end %>
+  
+app/views/kittens/_form.html.erb:10: syntax error, unexpected integer literal, expecting =>
+app/views/kittens/new.html.erb:2
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/_form.html.erb:10: syntax error, unexpected integer literal, expecting =>
+...ield :softness, min: 1, :max 10, step: 1  ); @output_buffer....
+...                             ^~
+):
+  
+app/views/kittens/_form.html.erb:10: syntax error, unexpected integer literal, expecting =>
+app/views/kittens/new.html.erb:2
+Started GET "/" for ::1 at 2025-07-13 18:35:08 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" ORDER BY "kittens"."created_at" DESC /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 3.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:35:10 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.5ms | GC: 0.2ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.2ms)
+Completed 200 OK in 43ms (Views: 2.9ms | ActiveRecord: 0.3ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/kittens" for ::1 at 2025-07-13 18:35:27 -0400
+Processing by KittensController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Bartholo-mew", "age"=>"2", "cuteness"=>"10", "softness"=>"7"}, "commit"=>"save kitten"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mKitten Create (0.8ms)[0m  [1m[32mINSERT INTO "kittens" ("name", "age", "cuteness", "softness", "created_at", "updated_at") VALUES ('Bartholo-mew', 2, 10, 7, '2025-07-13 22:35:27.307322', '2025-07-13 22:35:27.307322') RETURNING "id" /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:35:27 -0400
+Processing by KittensController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" ORDER BY "kittens"."created_at" DESC /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.2ms)
+Completed 200 OK in 21ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:35:32 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:43:in `find_kitten'
+Completed 406 Not Acceptable in 38ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#show is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/" for ::1 at 2025-07-13 18:35:38 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" ORDER BY "kittens"."created_at" DESC /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:36:29 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.3ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 3.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:36:55 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.4ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 4.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:37:33 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.4ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 4.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:37:34 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:37:47 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.3ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:37:47 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/kittens" for ::1 at 2025-07-13 18:38:10 -0400
+Processing by KittensController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Meow-Thusaleh", "age"=>"4", "cuteness"=>"5", "softness"=>"2"}, "commit"=>"save kitten"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mKitten Create (0.9ms)[0m  [1m[32mINSERT INTO "kittens" ("name", "age", "cuteness", "softness", "created_at", "updated_at") VALUES ('Meow-Thusaleh', 4, 5, 2, '2025-07-13 22:38:10.539158', '2025-07-13 22:38:10.539158') RETURNING "id" /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:38:10 -0400
+Processing by KittensController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:5
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.3ms)
+Completed 200 OK in 23ms (Views: 1.6ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:38:10 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#show is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-07-13 18:38:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/turbo.min-5f3b7fda.js.map" for ::1 at 2025-07-13 18:38:20 -0400
+Started GET "/assets/stimulus.min-2395e199.js.map" for ::1 at 2025-07-13 18:38:20 -0400
+Started GET "/" for ::1 at 2025-07-13 18:39:20 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.3ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.9ms)
+Completed 200 OK in 26ms (Views: 4.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-07-13 18:39:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/" for ::1 at 2025-07-13 18:41:30 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.7ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.7ms)
+Completed 200 OK in 27ms (Views: 4.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-07-13 18:41:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:41:47 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 39ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#show is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/" for ::1 at 2025-07-13 18:41:51 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-07-13 18:41:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/" for ::1 at 2025-07-13 18:45:21 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.5ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.2ms)
+Completed 200 OK in 24ms (Views: 4.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-07-13 18:45:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:45:22 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>@kitten.name</h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%= link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" kittens_path %>
+<%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+... "edit kitten" edit_kitten_path(@kitten) ); @output_buffer.s...
+...               ^~~~~~~~~~~~~~~~
+/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...d=( link_to "home" kittens_path ); @output_buffer.safe_appen...
+...                   ^~~~~~~~~~~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>@kitten.name</h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%= link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" kittens_path %>
+<%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+):
+1:    <h3>@kitten.name</h3>
+2:    <p>
+3:        age: <%= @kitten.age %> months<br>
+4:        cuteness: <%= @kitten.cuteness %>/10<br>
+5:        softness: <%= @kitten.softness %>/10<br>
+6:    </p>
+7:    <%= link_to "edit kitten" edit_kitten_path(@kitten) %>
+8:    <%= link_to "home" kittens_path %>
+9:    <%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+... "edit kitten" edit_kitten_path(@kitten) ); @output_buffer.s...
+...               ^~~~~~~~~~~~~~~~
+/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...d=( link_to "home" kittens_path ); @output_buffer.safe_appen...
+...                   ^~~~~~~~~~~~
+):
+  
+app/views/kittens/show.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:46:03 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>@kitten.name</h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" index_path %>
+<%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...end=( link_to "home" index_path ); @output_buffer.safe_appen...
+...                     ^~~~~~~~~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3>@kitten.name</h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" index_path %>
+<%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+):
+1:    <h3>@kitten.name</h3>
+2:    <p>
+3:        age: <%= @kitten.age %> months<br>
+4:        cuteness: <%= @kitten.cuteness %>/10<br>
+5:        softness: <%= @kitten.softness %>/10<br>
+6:    </p>
+7:    <%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+8:    <%= link_to "home" index_path %>
+9:    <%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...end=( link_to "home" index_path ); @output_buffer.safe_appen...
+...                     ^~~~~~~~~~
+):
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:46:22 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.1ms)
+Completed 200 OK in 30ms (Views: 2.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:46:41 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 1.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:46:54 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3><%= @kitten.name %></h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" index_path %>
+<%# button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...end=( link_to "home" index_path ); @output_buffer.safe_appen...
+...                     ^~~~~~~~~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h3><%= @kitten.name %></h3>
+<p>
+    age: <%= @kitten.age %> months<br>
+    cuteness: <%= @kitten.cuteness %>/10<br>
+    softness: <%= @kitten.softness %>/10<br>
+</p>
+<%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+<%= link_to "home" index_path %>
+<%# button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+):
+1:    <h3><%= @kitten.name %></h3>
+2:    <p>
+3:        age: <%= @kitten.age %> months<br>
+4:        cuteness: <%= @kitten.cuteness %>/10<br>
+5:        softness: <%= @kitten.softness %>/10<br>
+6:    </p>
+7:    <%# link_to "edit kitten" edit_kitten_path(@kitten) %>
+8:    <%= link_to "home" index_path %>
+9:    <%# button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/Users/mpeer/Documents/repos/odin-kittens/app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+...end=( link_to "home" index_path ); @output_buffer.safe_appen...
+...                     ^~~~~~~~~~
+):
+  
+app/views/kittens/show.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:47:55 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index_path' for an instance of #<Class:0x0000000122e903e0>)
+Caused by: NameError (undefined local variable or method `index_path' for an instance of #<Class:0x0000000122e903e0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `index_path' for an instance of #<Class:0x0000000122e903e0>):
+    5:     softness: <%= @kitten.softness %>/10<br>
+    6: </p>
+    7: <%= link_to "edit kitten", edit_kitten_path(@kitten) %>
+    8: <%= link_to "home", index_path %>
+    9: <%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:8
+
+Information for cause: NameError (undefined local variable or method `index_path' for an instance of #<Class:0x0000000122e903e0>):
+  
+app/views/kittens/show.html.erb:8
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:48:11 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 0..3))
+Caused by: ArgumentError (wrong number of arguments (given 4, expected 0..3))
+
+Information for: ActionView::Template::Error (wrong number of arguments (given 4, expected 0..3)):
+    6: </p>
+    7: <%= link_to "edit kitten", edit_kitten_path(@kitten) %>
+    8: <%= link_to "home", kittens_path %>
+    9: <%= button_to "delete", @kitten, :delete, data: { turbo_confirm: "are you sure you want to delete?" } %>
+  
+app/views/kittens/show.html.erb:9
+
+Information for cause: ArgumentError (wrong number of arguments (given 4, expected 0..3)):
+  
+app/views/kittens/show.html.erb:9
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:48:32 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 2.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2/edit" for ::1 at 2025-07-13 18:48:33 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 39ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:48:35 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:49:03 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 2.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2/edit" for ::1 at 2025-07-13 18:49:08 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 37ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/kittens" for ::1 at 2025-07-13 18:49:08 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:49:10 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.4ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 1.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started DELETE "/kittens/2" for ::1 at 2025-07-13 18:49:14 -0400
+Processing by KittensController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/kittens_controller.rb:34:in `destroy'
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:49:57 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 2.5ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:49:59 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:50:00 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2/edit" for ::1 at 2025-07-13 18:50:01 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 35ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/kittens/2/edit" for ::1 at 2025-07-13 18:50:02 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionController::MissingExactTemplate (KittensController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in `block in process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in `block in run_callbacks'
+turbo-rails (2.0.16) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.16) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.16) lib/rack/etag.rb:29:in `call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.16) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.16) lib/rack/method_override.rb:28:in `call'
+rack (3.1.16) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/kittens" for ::1 at 2025-07-13 18:50:02 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/kittens/2" for ::1 at 2025-07-13 18:50:04 -0400
+Processing by KittensController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/kittens_controller.rb:34:in `destroy'
+Started GET "/kittens" for ::1 at 2025-07-13 18:52:12 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.6ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 3.9ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:52:12 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/2" for ::1 at 2025-07-13 18:52:14 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/kittens/2" for ::1 at 2025-07-13 18:52:16 -0400
+Processing by KittensController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1 /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mCACHE Kitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/kittens_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:34:in `destroy'
+  [1m[36mKitten Destroy (0.5ms)[0m  [1m[31mDELETE FROM "kittens" WHERE "kittens"."id" = 2 /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:34:in `destroy'
+Redirected to http://localhost:3000/kittens
+Completed 302 Found in 42ms (ActiveRecord: 1.6ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:52:17 -0400
+Processing by KittensController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 1.0ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/new" for ::1 at 2025-07-13 18:52:18 -0400
+Processing by KittensController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/new.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered kittens/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/kittens" for ::1 at 2025-07-13 18:52:26 -0400
+Processing by KittensController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Meow-Thusaleh", "age"=>"4", "cuteness"=>"6", "softness"=>"5"}, "commit"=>"save kitten"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mKitten Create (0.9ms)[0m  [1m[32mINSERT INTO "kittens" ("name", "age", "cuteness", "softness", "created_at", "updated_at") VALUES ('Meow-Thusaleh', 4, 6, 5, '2025-07-13 22:52:26.476363', '2025-07-13 22:52:26.476363') RETURNING "id" /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-07-13 18:52:26 -0400
+Processing by KittensController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/3" for ::1 at 2025-07-13 18:53:14 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 3 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 2.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:53:15 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 1.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:53:15 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 1.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 18:53:16 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.9ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 3.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 18:53:31 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.1ms)
+Completed 200 OK in 31ms (Views: 3.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 18:53:56 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 0.9ms | GC: 0.1ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 29ms (Views: 2.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started PATCH "/kittens/1" for ::1 at 2025-07-13 18:54:08 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Bartholo-Mew", "age"=>"0", "cuteness"=>"10", "softness"=>"10"}, "commit"=>"save kitten", "id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Redirected to http://localhost:3000/kittens/1
+Completed 302 Found in 39ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:54:08 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.1ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.3ms)
+Completed 200 OK in 24ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:54:21 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.3ms)
+Completed 200 OK in 40ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:54:25 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 2.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:54:26 -0400
+Processing by KittensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 1.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:54:27 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 2.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 18:54:27 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 1.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/kittens/1" for ::1 at 2025-07-13 18:54:35 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Bartholo-Mew", "age"=>"1", "cuteness"=>"2", "softness"=>"1"}, "commit"=>"save kitten", "id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+Redirected to http://localhost:3000/kittens/1
+Completed 302 Found in 39ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:54:35 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 0.8ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:55:44 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.5ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 3.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/kittens/1/edit" for ::1 at 2025-07-13 18:55:44 -0400
+Processing by KittensController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='edit',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/edit.html.erb within layouts/application
+  Rendered kittens/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered kittens/edit.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.3ms)
+
+
+Started PATCH "/kittens/1" for ::1 at 2025-07-13 18:55:55 -0400
+Processing by KittensController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "kitten"=>{"name"=>"Bartholo-Mew", "age"=>"4", "cuteness"=>"10", "softness"=>"10"}, "commit"=>"save kitten", "id"=>"1"}
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mKitten Update (0.6ms)[0m  [1m[33mUPDATE "kittens" SET "name" = 'Bartholo-Mew', "age" = 4, "softness" = 10, "updated_at" = '2025-07-13 22:55:55.824954' WHERE "kittens"."id" = 1 /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:26:in `update'
+Redirected to http://localhost:3000/kittens/1
+Completed 302 Found in 42ms (ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/kittens/1" for ::1 at 2025-07-13 18:55:55 -0400
+Processing by KittensController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mKitten Load (0.0ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" WHERE "kittens"."id" = 1 LIMIT 1 /*action='show',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/controllers/kittens_controller.rb:41:in `find_kitten'
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/show.html.erb within layouts/application
+  Rendered kittens/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 0.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/kittens" for ::1 at 2025-07-13 18:55:58 -0400
+Processing by KittensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering kittens/index.html.erb within layouts/application
+  [1m[36mKitten Load (0.2ms)[0m  [1m[34mSELECT "kittens".* FROM "kittens" /*action='index',application='OdinKittens',controller='kittens'*/[0m
+  ↳ app/views/kittens/index.html.erb:6
+  Rendered kittens/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.5ms)
+Completed 200 OK in 40ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+

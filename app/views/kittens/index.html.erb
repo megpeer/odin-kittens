@@ -1,0 +1,14 @@
+<%= link_to "new kitten", new_kitten_path %>
+
+
+<h3>KITTEN LIST</h3>
+<div>
+<% @kittens.each do |kitten| %>
+<p>
+    <strong><%= link_to kitten.name, kitten %></strong><br>
+    age: <%= kitten.age %> months<br>
+    cuteness: <%= kitten.cuteness %>/10<br>
+    softness: <%= kitten.softness %>/10<br>
+</p>
+<% end %>
+</div>

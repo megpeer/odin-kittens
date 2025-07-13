@@ -1,0 +1,14 @@
+<%= form_with model: @kitten do |form| %>
+
+
+    <%= form.text_field :name, placeholder: "Name"%><br>
+
+    age: <%= form.number_field :age, in: 0..24, step: 1, :value => (0) %> months<br>
+
+    cuteness: <%= form.number_field :cuteness, in: 1..10, step: 1, :value => (1)  %><br>
+
+    softness: <%= form.number_field :softness, in: 1..10, step: 1, :value => (1) %><br>
+    <%= form.submit "save kitten"%><br>
+
+<% end %>
+
